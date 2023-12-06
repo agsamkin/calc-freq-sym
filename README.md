@@ -1,0 +1,1 @@
+# Calculation of the frequency of symbols
