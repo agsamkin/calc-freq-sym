@@ -1,0 +1,9 @@
+server:
+  port: ${PORT:8080}
+
+spring:
+  application:
+    name: calc-freq-sym
+
+  profiles:
+    active: ${APP_ENV:dev}
