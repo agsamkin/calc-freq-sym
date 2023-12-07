@@ -14,6 +14,6 @@ import lombok.Setter;
 @AllArgsConstructor
 @Builder
 public class InputStringDto {
-    @Size(min = 1, max = 300, message = "Input string size should be between 1 and 300")
+    @Size(min = 1, max = 300, message = "Text size should be between 1 and 300")
     private String text;
 }
