@@ -1,5 +1,6 @@
 package home.ags.service.impl;
 
+import home.ags.dto.InputStringDto;
 import home.ags.service.CalculationFrequencySymbolsService;
 import org.springframework.stereotype.Service;
 
@@ -9,16 +10,13 @@ import java.util.stream.Collectors;
 
 @Service
 public class CalculationFrequencySymbolsServiceImpl implements CalculationFrequencySymbolsService {
-    public static final String EMPTY_STRING = "";
 
     @Override
-    public String calculateFrequencyOfSymbols(String input) {
-        if (input.isEmpty()) {
-            return EMPTY_STRING;
-        }
+    public String calculateFrequencyOfSymbols(InputStringDto input) {
+        String text = input.getText();
 
         Map<Character, Integer> freq = new HashMap<>();
-        char[] chars = input.toCharArray();
+        char[] chars = text.toCharArray();
 
         for (char ch : chars) {
             int count = freq.getOrDefault(ch, 0);
@@ -33,4 +31,5 @@ public class CalculationFrequencySymbolsServiceImpl implements CalculationFreque
 
         return output;
     }
+
 }
