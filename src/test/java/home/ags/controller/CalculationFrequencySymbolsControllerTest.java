@@ -36,7 +36,7 @@ public class CalculationFrequencySymbolsControllerTest {
                         .content(text0))
                 .andReturn()
                 .getResponse().getContentAsString();
-        assertThat(response, containsString("Input string size should be between 1 and 300"));
+        assertThat(response, containsString("Text size should be between 1 and 300"));
     }
 
     @Test
@@ -55,7 +55,7 @@ public class CalculationFrequencySymbolsControllerTest {
                                 .content(text301))
                 .andReturn()
                 .getResponse().getContentAsString();
-        assertThat(response, containsString("Input string size should be between 1 and 300"));
+        assertThat(response, containsString("Text size should be between 1 and 300"));
     }
 
     @Test
